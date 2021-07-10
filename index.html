@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./reset.css">
+    <style>
+        
+        body,html {
+            background-color: hsl(233, 47%, 7%);
+            width: 100%;
+            height: 100%;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: row;
+            background-color: hsl(244, 38%, 16%);
+            width: 60vw;
+            height: 50vh;
+            border-radius: 10px;
+            flex-basis: auto;
+        }
+        .content-div{
+            order: 1;
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            flex-basis: auto;
+        }
+        .img-div{
+            order: 2;
+            width: 50%;
+            height: 100%;
+            filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(230deg) saturate(600%) contrast(0.8);
+            flex-basis: auto;
+        }
+        .img-div img{
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+        .strong-text{
+            color: hsl(277, 64%, 61%);
+        }
+        .main-heading{
+           font-family: 'Inter';
+            font-weight: 700;
+            color:  hsl(0, 0%, 100%);
+            font-size: 2vw;
+            text-align: start;
+            width: 80%;
+
+        }
+
+        .description{
+            font-family: 'Lexend Deca';
+            font-weight: 400;
+            color:  hsla(0, 0%, 100%, 0.75);
+            font-size: 1vw;
+            text-align: start;
+            width: 80%;
+        }
+        .stats-div{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 80%;
+        }
+        .stats-nums,.stats-heading{
+            display: block;
+        }
+
+        .stats-heading{
+            font-family: 'Lexend Deca';
+            font-weight: 400;
+            color: hsla(0, 0%, 100%, 0.6);
+            font-size: 1vw;
+        }
+        .stats-nums{
+            font-family: 'Inter';
+            font-weight: 700;
+            color:  hsl(0, 0%, 100%);
+            font-size: 1.2vw;
+            margin-bottom: 5%;
+        }
+       /* Medium devices (landscape tablets, 768px and up) */
+        @media only screen and (max-width: 768px) {
+            .container{
+                padding-bottom: 20%;
+            }
+            .card{
+                width: 60%;
+                height: 100%;
+                flex-direction: column;
+                justify-content: center;
+                margin-top: 20%;
+            }
+            .img-div{
+                order: 1;
+                width: 100%;
+                height: 40%;
+            }
+            .content-div{
+                order: 2;
+                width: 100%;
+                justify-content: space-evenly;
+            }
+            .main-heading{
+                font-size: 5vw;
+                text-align: center;
+            }
+            .description{
+                font-size: 2.5vw;
+                text-align: center;
+            }
+            .stats-div{
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                height: 50%;
+            }
+            .stats-heading{
+                font-size: 2.5vw;
+                text-align: center;
+            } .stats-nums{
+                font-size: 5vw;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="content-div">
+                <p class="main-heading">
+                    Get <span class="strong-text">insights</span> that help your business grow.
+                </p>
+
+                <p class="description">
+                    Discover the benefits of data analytics and make better decisions regarding revenue, customer experience, and overall efficiency.
+                </p>
+                <div class="stats-div">
+                    <div>
+                        <span class="stats-nums">10k+</span> 
+                        <span class="stats-heading">COMPANIES</span>
+                    </div>
+                    <div>
+                          
+                        <span class="stats-nums">314</span> 
+                        <span class="stats-heading">TEMPLATES</span>
+                    </div>
+                    <div>
+                        <span class="stats-nums">12M+</span> 
+                        <span class="stats-heading">QUERIES</span>
+                    </div>
+                </div>
+            </div>
+            <div class="img-div">
+                <img src="./images/image-header-desktop.jpg">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
